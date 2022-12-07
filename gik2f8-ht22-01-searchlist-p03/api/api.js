@@ -6,4 +6,12 @@ async function getAll() {
     .catch((e) => e);
 
   return result;
-}
+};
+
+async function getBookDetails(id) {
+  const result = await fetch(url + "/" + id)
+    .then((result) => result.json())
+    .catch((e) => e);
+  console.log(result)
+  return result;
+};
